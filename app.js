@@ -44,6 +44,11 @@ app.use(orderRoutes)
 app.use(premiumRoutes)
 app.use(forgotRoutes)
 
+app.use((req, res)=>{
+    console.log('urllll', req.url)
+    res.sendFile(path.join(__dirname, `public/${req.url}`))
+})
+
 User.hasMany(Expense)
 Expense.belongsTo(User)
 
