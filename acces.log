@@ -23,3 +23,7 @@
 ::1 - - [13/Feb/2023:09:07:02 +0000] "GET /expense/pagination?page=1&limit=3 HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 ::1 - - [13/Feb/2023:09:07:04 +0000] "GET /expense/pagination?page=2&limit=3 HTTP/1.1" 200 874 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
 ::1 - - [13/Feb/2023:09:07:09 +0000] "GET /expense/pagination?page=3&limit=3 HTTP/1.1" 200 621 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+::1 - - [15/Feb/2023:13:42:52 +0000] "POST /user/signup HTTP/1.1" 200 248 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+::1 - - [15/Feb/2023:13:45:12 +0000] "POST /user/login HTTP/1.1" 200 179 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+::1 - - [15/Feb/2023:13:45:14 +0000] "GET /purchase/premiummembership HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
+::1 - - [15/Feb/2023:13:45:14 +0000] "GET /expense/getexpenses HTTP/1.1" 304 - "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36"
