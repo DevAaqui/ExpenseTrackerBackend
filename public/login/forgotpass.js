@@ -17,7 +17,7 @@ function onSubmit(e) {
         //upPass: document.getElementById('password').value
     }
 
-    axios.post(`http://localhost:3000/password/forgotpassword`, forgotObj, {headers: {'Authorization': token}})
+    axios.post(`http://3.87.243.227:3000/password/forgotpassword`, forgotObj, {headers: {'Authorization': token}})
     .then(response => {
         if(response.status ===202)
         {

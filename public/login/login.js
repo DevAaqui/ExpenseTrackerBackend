@@ -18,7 +18,7 @@ function onSubmit() {
         password: loginPassword.value
     }
 
-    axios.post('http://localhost:3000/user/login',loginObject)
+    axios.post('http://3.87.243.227:3000/user/login',loginObject)
     .then(response => {
         //console.log(response.data.message)
         const msg = response.data.message
@@ -42,7 +42,7 @@ function showMessage(msg) {
         alert('Login UnSuccessfull')        
     }
     else{
-        axios.get('http://localhost:3000/user/login/404')
+        axios.get('http://3.87.243.227:3000/user/login/404')
         .then(response => {
             document.body.innerHTML = `<h1>Error: User not found</h1>`
         })
