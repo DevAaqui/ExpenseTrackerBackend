@@ -1,9 +1,9 @@
 const express = require('express')
 
 const path = require('path')
-const helmet = require('helmet')
-const morgan = require('morgan')
-const fs = require('fs')
+//const helmet = require('helmet')
+// const morgan = require('morgan')
+//const fs = require('fs')
 const dotenv = require('dotenv')
 
 var cors = require('cors')
@@ -21,7 +21,9 @@ const bodyParser = require('body-parser')
 
 const sequelize = require('./util/database')
 
-app.use(cors())
+app.use(cors({
+    origin: '*'
+}));
 
 const userRoutes = require('./route/user')
 const expenseRoutes = require('./route/expenseR')
@@ -29,10 +31,10 @@ const orderRoutes = require('./route/purchaseR')
 const premiumRoutes = require('./route/premiumR')
 const forgotRoutes = require('./route/forgotPassR')
 
-const logStream = fs.createWriteStream(path.join(__dirname, 'acces.log'), {flags: 'a'})
+//const logStream = fs.createWriteStream(path.join(__dirname, 'acces.log'), {flags: 'a'})
 
-app.use(helmet())
-app.use(morgan("combined", {stream: logStream}))
+//app.use(helmet())
+//app.use(morgan("combined", {stream: logStream}))
 
 app.use(bodyParser.json({extended: false}))
 
@@ -43,6 +45,12 @@ app.use(expenseRoutes)
 app.use(orderRoutes)
 app.use(premiumRoutes)
 app.use(forgotRoutes)
+
+// app.use((req, res)=>{
+//     console.log('urllll....', req.url)
+//     res.sendFile(path.join(__dirname, `public/${req.url}`))
+// })
+
 
 User.hasMany(Expense)
 Expense.belongsTo(User)
